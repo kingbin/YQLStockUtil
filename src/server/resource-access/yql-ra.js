@@ -33,7 +33,13 @@ function extractData(res) {
     throw new Error(e);
   }
 
-  return result;
+  var errors = _.takeWhile(result, ['Name',null]);
+  if( errors.length > 0 ) {
+    throw new Error('Symbol/s Not Found: '+_.map(errors, _.iteratee('symbol')).join(', ') );
+  }
+  else {
+    return result;
+  }
 }
 
 function handleError (error) {

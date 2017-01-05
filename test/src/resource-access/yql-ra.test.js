@@ -17,8 +17,7 @@ describe('yql-ra.js', function () {
     });
 
     it('getStock init test', function () {
-      return expect(yqlRA.getStock(data.symbols)).to.eventually.deep.equal(data.symbols);
-      //return expect(yqlRA.getStock(data.symbols)).to.eventually.deep.equal([{ RID: 42 }]);
+      return expect(yqlRA.getStock(data.symbols)).to.eventually.be.fulfilled;
     });
   });
 });

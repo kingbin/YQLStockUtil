@@ -21,15 +21,7 @@ class DTNManager {
      */
     getStocks(payload)
     {
-      var symbols = payload.stockSymbols;
-
-      return yqlRA.getStocks(symbols);
-//      symbols.forEach(s=> {
-//        logger.info('getting Stock: %s',s);
-//        yqlRA.getStock(s);
-//      });
-//
-//      return yqlRA.getStock(symbols);
+      return yqlRA.getStocks(payload.stockSymbols);
     }
 }
 

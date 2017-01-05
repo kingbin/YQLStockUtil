@@ -13,14 +13,13 @@ import util from 'util';
 
 import dtnMgr from './server/managers/dtn-manager';
 
-//import envConfig from 'config';
-//logger.info('envName',envConfig.get('tag'));
-
 logger.info('ARMtech DTN Service');
 
 function list(val) {
   return val.split(',');
 }
+
+//node server.js -s 'GOOG','YHOO','AAPL','MSFT'
 
 program
   .arguments('')

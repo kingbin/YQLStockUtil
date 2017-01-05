@@ -16,14 +16,14 @@ describe('dtn-manager.js', function () {
     });
 
     it('getStocks rejected with a bad input', function () {
-      var payload = {'stockSymbols': ['AAPEL']};
+      var payload = {'stockSymbols': ['AAPEL','ZZZZZZZZZ','YHOO']};
       return expect(dtnMgr.getStocks(payload)).to.eventually.be.rejected;
     });
 
     it('getStocks to be fullfilled', function () {
       var payload = {'stockSymbols': data.symbols};
       return expect(dtnMgr.getStocks(payload))
-        .to.eventually.deep.equal({ success: true });
+        .to.eventually.be.fulfilled;
       //return assert.isFulfilled(dtnMgr.getStocks({'stockSymbols': 'AAPL'}));
     });
 
