@@ -1,0 +1,102 @@
+{
+  "name": "armceppservices",
+  "description": "A service to get commodities",
+  "version": "0.0.1",
+  "main": "server.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "config": {
+    "app_env": "test"
+  },
+  "private": true,
+  "scripts": {
+    "compile": "babel src/ -d dist/ ",
+    "prepublish": "gulp build",
+    "test": "mocha --require babel-register --recursive",
+    "cover": "nyc npm test",
+    "watch-test": "mocha --watch --require babel-register --recursive",
+    "start": "node dist/server.js",
+    "yuidocs": "yuidoc -e .js",
+    "docs": "esdoc --verbose --pedantic --private -c jsdoc-conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.armt.com:web-team/ARMCEPPService.git"
+  },
+  "dependencies": {
+    "assert": "^1.3.0",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.13.3",
+    "commander": "^2.9.0",
+    "config": "^1.24.0",
+    "errorhandler": "^1.4.2",
+    "knex": "^0.12.6",
+    "knex-connection-manager": "^1.0.2",
+    "lodash": "^4.15.0",
+    "morgan": "^1.6.1",
+    "mssql": "^3.3.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.2.0",
+    "xml2js": "^0.4.17",
+    "yargs": "^6.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-istanbul": "^0.11.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.18.0",
+    "babel-root-slash-import": "^1.1.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "del": "^2.2.2",
+    "esdoc-es7-plugin": "0.0.3",
+    "esdoc-node-plugin": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-bump": "^2.5.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-git": "^1.12.0",
+    "gulp-header": "^1.8.8",
+    "gulp-jshint": "^2.0.2",
+    "gulp-mocha": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-resolve-dependencies": "^2.2.0",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "mocha": "^3.0.2",
+    "mocha-lcov-reporter": "^1.2.0",
+    "pump": "^1.0.1",
+    "rollup": "^0.36.3",
+    "uglify-js": "^2.7.4",
+    "unexpected": "^10.17.2",
+    "yuidoc-lucid-theme": "^0.1.1",
+    "yuidocjs": "^0.10.2"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "text-summary",
+      "lcov",
+      "html"
+    ],
+    "extension": [
+      ".jsx",
+      ".es6"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "all": "all"
+  }
+}

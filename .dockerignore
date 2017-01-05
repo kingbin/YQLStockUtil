@@ -1,0 +1,25 @@
+# OS X artifacts
+.DS_Store
+
+# IntelliJ artifacts
+.idea
+
+# Git artifacts
+.git
+
+# Node artifacts
+node_modules
+
+# Runtime artifacts
+*.log
+*.stdout
+*.stderr
+
+# Documentation artifacts
+docs
+
+# Deployment artifacts
+docker-deploy
+
+# Build configuration
+Makefile

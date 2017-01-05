@@ -1,0 +1,19 @@
+# Webstorm artifacts
+.idea
+
+# Node artifacts
+node_modules
+
+# ESDoc artifacts
+docs
+
+# Compiled Project
+prod
+dist
+
+# config
+config/*local.js
+
+# istanbul & nyc files
+.nyc_output
+coverage

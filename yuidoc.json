@@ -1,0 +1,16 @@
+{
+	"name": "arm-cepp-service",
+	"description": "ARM CEPP Services",
+	"version": "0.0.1",
+	"url": "https://git.armt.com/web-team/ARMCEPPServices",
+	"logo": "http://iconshow.me/media/images/Application/Modern-Flat-style-Icons/png/128/Document.png",
+	"options": {
+		"paths": ["./server","./client"],
+		"outdir": "./yuidocs",
+		"themedir": "node_modules/yuidoc-lucid-theme",
+		"helpers": ["node_modules/yuidoc-lucid-theme/helpers/helpers.js"],
+        "external": {
+            "Promise": "https://github.com/petkaantonov/bluebird"
+        }
+	}
+}
